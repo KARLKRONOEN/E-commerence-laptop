@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/cart", "destination": "/cart.html" },
+    { "source": "/catalog", "destination": "/catalog.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/product", "destination": "/product.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
